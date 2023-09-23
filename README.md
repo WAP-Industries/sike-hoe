@@ -1,5 +1,6 @@
 ### Functionality  
-"Sike Hoe" is a malware that redirects the target to chrome tabs every minute  
+"Sike Hoe" is a malware that redirects the target to chrome tabs every minute 
+  
 If the target deletes the malware file spawning the chrome tabs, "Sike Hoe" will simply reproduce the malware file
 
 ---
