@@ -14,3 +14,8 @@ If the target deletes the malware file spawning the chrome tabs, "Sike Hoe" will
    - creates a directory called `Applications` in the user profile
    - copies the `Win32Helper.bat` file over to the directory
    - registers the `Win32Helper.bat` file to run every minute
+
+---
+
+### Customisation
+Comments in the source code will guide you on how to customise the virus to your liking
