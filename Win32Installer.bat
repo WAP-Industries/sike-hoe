@@ -54,6 +54,6 @@ goto :MAIN
     call :CreateTaskDriver
     echo task driver created
 
-    schtasks /create /tn "HostDriverSCJE" /tr "%driverfile%" /sc minute /mo 1 /st 00:00:00 /f
+    schtasks /create /tn "HostDriverSH" /tr "%driverfile%" /sc minute /mo 1 /st 00:00:00 /f
 
 endlocal
