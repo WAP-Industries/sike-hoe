@@ -14,6 +14,11 @@ If the target deletes the malware file spawning the chrome tabs, "Sike Hoe" will
    - creates a directory called `Applications` in the user profile
    - copies the `Win32Helper.bat` file over to the directory
    - registers the `Win32Helper.bat` file in the TaskScheduler as "sike", which will run every minute
+  
+---
+
+### Deletion
+To stop the malware from running, open Task Scheduler and delete the "HostDriverSH" and "sike" tasks.
 
 ---
 
