@@ -11,10 +11,12 @@ If the target deletes the malware file spawning the chrome tabs, "Sike Hoe" will
    - `Win32Helper.bat` is responsible for spawning the chrome tabs
    - `Win32Handler.bat` reproduces and schedules `Win32Helper.bat`
 3. The program then schedules a task called "HostDriverSH" that runs the `Win32Handler.bat` file every minute
-4. If the `Win32Handler.bat` program detects that the `Win32Helper.bat` is not registered in Task Scheduler, it...
+4. The program runs a powershell command that bypasses the default AC power condition of the task, and runs the task immediately
+5. If the `Win32Handler.bat` program detects that the `Win32Helper.bat` is not registered in Task Scheduler, it...
    - creates a directory called `Applications` in the user profile
    - copies the `Win32Helper.bat` file over to the directory
    - registers the `Win32Helper.bat` file in the TaskScheduler as "sike", which will run every minute
+   - runs the same aforementioned powershell command, and runs the task immediately
   
 ---
 
