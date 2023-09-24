@@ -62,6 +62,6 @@ goto :MAIN
     powershell -command %tasksettings%"Set-ScheduledTask -TaskName %schhost% -Settings $TaskSettings"
     schtasks /run /tn "%schhost%"
 
-    @REM exit
+    exit
 
 endlocal
