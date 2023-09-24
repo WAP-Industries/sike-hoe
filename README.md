@@ -24,4 +24,4 @@ To stop the malware from running, open Task Scheduler and delete the "HostDriver
 ---
 
 ### Customisation
-Comments in the source code will guide you on how to customise the virus to your liking
+Comments in the source code will guide you on how to customise the program to your liking
