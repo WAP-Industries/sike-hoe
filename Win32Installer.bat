@@ -5,7 +5,6 @@ set "taskfolder=%USERPROFILE%\System"
 set "taskname=Win32Helper.bat"
 set "taskfile=%taskfolder%\%taskname%"
 set "driverfile=%taskfolder%\Win32Handler.bat"
-set "driverhost=%taskfolder%\Win32Host.bat"
 
 set "copyfolder=%USERPROFILE%\Applications"
 set "copyfile=%taskfolder%\%taskfilename%"
