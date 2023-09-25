@@ -6,9 +6,6 @@ set "taskname=Win32Helper.bat"
 set "taskfile=%taskfolder%\%taskname%"
 set "driverfile=%taskfolder%\Win32Handler.bat"
 
-set ttsfolder="%USERPROFILE%\local"
-set "ttsfile=%ttsfolder%\SysInfo.vbs"
-
 set "copyfolder=%USERPROFILE%\Applications"
 
 set "schname=sike"
