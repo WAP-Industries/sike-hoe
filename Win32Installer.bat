@@ -59,7 +59,6 @@ goto :MAIN
 
     schtasks /create /tn "%schhost%" /tr "%driverfile%" /sc minute /mo 1 /st 00:00:00 /f
     powershell -command %tasksettings%"Set-ScheduledTask -TaskName %schhost% -Settings $TaskSettings"
-    schtasks /run /tn "%schhost%"
 
     exit
 
